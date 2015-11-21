@@ -44,7 +44,8 @@ function submitPOST(data,uri,response)
 function submitRegistration()
 {
     var email = document.getElementById("email").value;
-    var role = document.getElementById("role").value;
+    console.log(email);
+//    var role = document.getElementById("role").value;
     document.getElementById("errors").innerHTML = "";
     submitPOST("email=" + email + "&role" + role,"php/register.php","errors");
 }
