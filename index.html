@@ -92,9 +92,14 @@
         <div class="form-group">
 
           <div class="input-group">
-            <input type="text" class="form-control" id="email" placeholder="email">
+            <input type="text" class="form-control" placeholder="email" id="email">
+            <select>
+                <option value="" disabled="disabled" selected="selected">select an option</option>
+                <option value="Student">Student</option>
+                <option value="Company">Company</option>
+            </select>
             <div class="input-group-btn">
-              <button onClick="submitRegistration()" class="btn btn-default" value="Join the beta!" />
+              <button onClick="submitRegistration()" class="btn btn-default" value="Submit">Submit!</button>
             </div>
             <div id="errors">
             </div>
