@@ -10,6 +10,9 @@
         if(empty($_POST['email']))
             die("&#8226 Please enter an email<br>");
 
+        if(empty($_POST['role']))
+            die("&#8226 Please enter an role<br>");
+
         elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
             die("&#8226 Invalid email address<br>");
 
@@ -36,19 +39,27 @@
             die($errors . "&#8226 This email is already registered<br>");
         elseif($errors)
             die($errors);
+
 	
         $query = "INSERT INTO signups( 
                 email,
-		hostname
-            ) VALUES ( 
-                :email 
-            ) 
+                role,
+                hostname
+                ) VALUES ( 
+                    :email,
+                    :role
+                ) 
         "; 
+
+        if($_POST['role'] != 'Student' &&
+            $_POST['role'] != 'Business')
+            die("Invalid role selected");
 
         $query_params = array(
             'email' => $_POST['email'],
+            'role' => $_POST['role'],
 	    'hostname' => get_client_ip()
-	);
+        );
 
         try 
         {
