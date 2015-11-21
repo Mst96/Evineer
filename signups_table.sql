@@ -1,5 +1,6 @@
 CREATE TABLE `signups` (
     `signup_id`			INT(11)			NOT NULL	AUTO_INCREMENT,
+    `businessORStudent`   VARCHAR(255)    NOT NULL,
     `email`				VARCHAR(255)	NOT NULL,
     `hostname`			VARCHAR(255)	NOT NULL,
     `created_on`		TIMESTAMP		NOT NULL	DEFAULT CURRENT_TIMESTAMP,
