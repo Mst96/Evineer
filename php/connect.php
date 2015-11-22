@@ -1,7 +1,7 @@
 <?php
 
     $username = "root";
-    $password = "";
+    $password = "bitnami";
     $host = "localhost";
     $dbname = "evineer";
 
@@ -10,12 +10,12 @@
 
     try
     {
-        $db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf",
+        $db = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8",
                     $username,$password,$options);
     } 
     catch(PDOException $ex)
     {
-        die("<h1 style='font-family:arial, sans-serif'> Error connecting to database<h1>\n");
+        die("<h1 style='font-family:arial, sans-serif'> Error connecting to database:$ex<h1>\n");
         //need to add something better to do here when this happens
     }
     

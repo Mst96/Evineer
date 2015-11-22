@@ -11,7 +11,7 @@
             die("&#8226 Please enter an email<br>");
 
         if(empty($_POST['role']))
-            die("&#8226 Please enter an role<br>");
+            die("&#8226 Please enter a role:$role<br>");
 
         elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
             die("&#8226 Invalid email address<br>");
@@ -47,7 +47,8 @@
                 hostname
                 ) VALUES ( 
                     :email,
-                    :role
+                    :role,
+                    :hostname
                 ) 
         "; 
 
@@ -71,5 +72,5 @@
             //TODO
             die("database insert error " . $ex->getMessage());
         }
-        die("Redirecting to login");
+        die("Succesfully signed up! :)");
     }
