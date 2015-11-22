@@ -11,10 +11,7 @@
             die("&#8226 Please enter an email<br>");
 
         if(empty($_POST['role']))
-        {
-            $role = $_POST['role'];
             die("&#8226 Please enter a role:$role<br>");
-        }
 
         elseif(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
             die("&#8226 Invalid email address<br>");
@@ -51,6 +48,7 @@
                 ) VALUES ( 
                     :email,
                     :role
+                    :hostname
                 ) 
         "; 
 
