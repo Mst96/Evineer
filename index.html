@@ -53,7 +53,68 @@
           position: center;
           margin:auto;
         }
+        input
+        {
+            display: block;
+            margin: 0 0;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+            appearance: none;
+            background-color: #3896ba;
+            box-shadow: none;
+            color: #bad6e1;
+            border-radius: none;
+        }
 
+        button
+        {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            padding: 5px 20px;
+            font-size: 18px;
+            font-family: sans-serif;
+            line-height: 1.8;
+            appearance: none;
+            box-shadow: none;
+            border-radius: 0;
+            color: #314159;
+            background: rgba(0,0,0,0);
+            border: solid 5px #555555; 
+        }
+
+        button:focus
+        {
+            outline: none;
+        }
+
+        button:hover
+        {
+            background: rgba(5,5,5,0.1);
+        }
+
+        button:active
+        {
+            background: rgba(5,5,5,5);
+        }
+
+        input:focus 
+        {
+            outline: none;
+        }
+        .dropdown 
+        {
+            width:160%;
+            padding:5px 0px;
+            position:absolute;
+            top:100%;
+            left:0px;
+            z-index:-1;
+            opacity:0;
+            transition:opacity linear 0.15s;
+            box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+            background:#2e2728;
+        }
     </style>
 
   </head>
@@ -99,12 +160,12 @@
       </div>
     <div class="row">
 
-        <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4 col-md-offset-4">
 
       <form class="form-inline" method="post" action="">
         <div class="form-group">
 
-          <div class="input-group marginBottom">
+          <div class="input-group marginBottom clearfix">
             <input type="text" class="form-control" placeholder="email" id="email">
             <div class="form-group">
               <select class="form-control" id="role" selected="selected">
@@ -112,7 +173,12 @@
               <option value="Business">I am a business</option>
               </select>
 
-              <button type="button" id="submitButton" onClick="setLoading(true);submitRegistration()" class="btn btn-default marginBottom" value="Submit">Submit!</button>
+              <button type="button" class="button" id="submitButton" onClick="setLoading(true);submitRegistration()" class="btn btn-default marginBottom" value="Submit">Submit!</button>
+            </div>
+            <div class="loader" style="display:none" id="loadme">
+                <svg class="circular" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="8" stroke-miterlimit="10"/>
+                </svg>
             </div>
             <div id="errors">
             </div>

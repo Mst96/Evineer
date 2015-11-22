@@ -32,10 +32,14 @@ function setLoading(isLoading)
 {
     if(isLoading)
     {
-        document.getElementById("errors").innerHTML = '<div class="loader"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="8" stroke-miterlimit="10"/></svg> </div>';
+        document.getElementById("loadme").style.display = 'block';
+        document.getElementById("submitButton").style.display = 'none';
     }
     else
-        document.getElementById("errors").innerHTML = "";
+    {
+        document.getElementById("loadme").style.display = 'none';
+        document.getElementById("submitButton").style.display = 'block';
+    }
 }
 
 
