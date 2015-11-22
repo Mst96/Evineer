@@ -32,12 +32,13 @@ function setLoading(isLoading)
 {
     if(isLoading)
     {
-        document.getElementById("loadme").style.display = 'block';
+//        document.getElementById("loadme").style.display = 'block';
+        document.getElementById("checkmark").style.display = 'none';
         document.getElementById("submitButton").style.display = 'none';
     }
     else
     {
-        document.getElementById("loadme").style.display = 'none';
+ //       document.getElementById("loadme").style.display = 'none';
         document.getElementById("submitButton").style.display = 'block';
         document.getElementById("checkmark").style.display = 'block';
     }
