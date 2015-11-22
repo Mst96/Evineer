@@ -50,8 +50,8 @@ function submitPOST(data,uri,response)
         if(xmlhttp.readyState==4 && xmlhttp.status == 200)
         {
             var response = xmlhttp.responseText;
-            document.getElementById("errors").innerHTML = response;
             setLoading(false);
+            document.getElementById("errors").innerHTML = response;
         }
     }
     xmlhttp.open("POST",uri,true);
