@@ -47,7 +47,7 @@
                 hostname
                 ) VALUES ( 
                     :email,
-                    :role
+                    :role,
                     :hostname
                 ) 
         "; 
