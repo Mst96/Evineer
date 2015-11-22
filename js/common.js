@@ -1,19 +1,18 @@
 $(function(){
-    $('#join').on('click', function(){
-        var email = $('input[name=email]').val(),
-            type = $('select[name=type]').val();
+	$('#join').on('click', function(){
+		var email = $('input[name=email]').val(),
+			type = $('select[name=type]').val();
 
-        if(email != "" && type != "")
-        {
-            $('#thank-you').show();
-            $('#sign-up').hide();
+		if(email != "" && type != "")
+		{
+			$('#sign-up').hide();
 
-            $.post('php/register', {
-                email : email
-            ,   role : type
-            }, function() {
-                console.log();
-            });
-        }
-    });
+			$.post('php/register', {
+				email : email
+			,	role : type
+			}, function(data) {
+				$('#thank-you').show();
+			});
+		}
+	});
 });
