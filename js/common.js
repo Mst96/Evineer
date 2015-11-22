@@ -39,6 +39,7 @@ function setLoading(isLoading)
     {
         document.getElementById("loadme").style.display = 'none';
         document.getElementById("submitButton").style.display = 'block';
+        document.getElementById("checkmark").style.display = 'block';
     }
 }
 
@@ -70,7 +71,6 @@ function submitRegistration()
 {
     var email = document.getElementById("email").value;
     var role = document.getElementById("role").value;
-    console.log(role);
     document.getElementById("errors").innerHTML = "";
     submitPOST("email=" + email + "&role=" + role,"php/register.php","errors");
 }

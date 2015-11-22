@@ -72,5 +72,5 @@
             //TODO
             die("database insert error " . $ex->getMessage());
         }
-        die("Succesfully signed up! :)");
+        die();
     }
