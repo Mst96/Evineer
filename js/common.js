@@ -25,7 +25,10 @@ var previous;
 function checkKeyPressed(e) 
 {
     if(e.keyCode == 13)
+    {
+        setLoading(true);
         submitRegistration();
+    }
 }
 
 function setLoading(isLoading)
