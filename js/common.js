@@ -39,6 +39,7 @@ function setLoading(isLoading)
     {
         document.getElementById("loadme").style.display = 'none';
         document.getElementById("submitButton").style.display = 'block';
+        document.getElementById("checkmark").style.display = 'block';
     }
 }
 
