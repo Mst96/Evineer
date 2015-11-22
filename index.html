@@ -42,12 +42,18 @@
             height: 50%;
           }
 
+        .bold{
+          font-weight: bold;
+        }
+        .red{
+          color:red;
+        }
         .marginBottom{
           margin-right: 100px;
           position: center;
           margin:auto;
         }
-        
+
     </style>
 
   </head>
@@ -108,8 +114,7 @@
 
               <button type="button" id="submitButton" onClick="setLoading(true);submitRegistration()" class="btn btn-default marginBottom" value="Submit">Submit!</button>
             </div>
-
-            <div id="errors">
+            <div id="errors bold red">
             </div>
           </div>
         </div>
@@ -117,6 +122,14 @@
       </form>
       </div>
     </div>
+
+    <div class="container">
+      <div class="row">
+        <h1>Why we are awesome!<h1>
+
+
+      </div>
+    </div> 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
