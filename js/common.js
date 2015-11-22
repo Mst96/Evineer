@@ -70,7 +70,6 @@ function submitRegistration()
 {
     var email = document.getElementById("email").value;
     var role = document.getElementById("role").value;
-    console.log(role);
     document.getElementById("errors").innerHTML = "";
     submitPOST("email=" + email + "&role=" + role,"php/register.php","errors");
 }
