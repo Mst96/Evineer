@@ -35,11 +35,17 @@
           margin-bottom: 100px;
         }
 
-          .middlepic {
+        .middlepic {
             margin: auto;
             width: 90%;
             height: 50%;
           }
+
+        .marginBottom{
+          margin-right: 100px;
+          position: center;
+          margin:auto;
+        }
 
     </style>
 
@@ -55,7 +61,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" rel="logo" href="#" title="Buy Sell Rent Everyting">
+            <a class="navbar-brand" rel="logo" href="#">
             <img style="max-width:100px; margin-top: -7px;"
                 src="img/Logo_evineer.svg">
             </a>
@@ -91,15 +97,15 @@
       <form class="form-inline" method="post" action="">
         <div class="form-group">
 
-          <div class="input-group">
+          <div class="input-group marginBottom">
             <input type="text" class="form-control" placeholder="email" id="email">
-            <select>
-                <option value="" disabled="disabled" selected="selected">select an option</option>
-                <option value="Student">Student</option>
-                <option value="Business">Business</option>
-            </select>
-            <div class="input-group-btn">
-              <button onClick="submitRegistration()" class="btn btn-default" value="Submit">Submit!</button>
+            <div class="form-group">
+              <select class="form-control" id="sel1">
+              <option value="student">I am a student</option>
+              <option value="Business">I am a business</option>
+              </select>
+
+              <button onClick="submitRegistration()" class="btn btn-default marginBottom" value="Submit">Submit!</button>
             </div>
             <div id="errors">
             </div>
