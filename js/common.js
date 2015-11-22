@@ -21,14 +21,22 @@ function getAjax()
 
 window.addEventListener("keydown", checkKeyPressed, false);
  
- var previous;
-function checkKeyPressed(e) {
-
-    if(e.keyCode == 13){
+var previous;
+function checkKeyPressed(e) 
+{
+    if(e.keyCode == 13)
         submitRegistration();
-    }
 }
 
+function setLoading(isLoading)
+{
+    if(isLoading)
+    {
+        document.getElementById("errors").innerHTML = '<div class="loader"><svg class="circular" viewBox="25 25 50 50"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="8" stroke-miterlimit="10"/></svg> </div>';
+    }
+    else
+        document.getElementById("errors").innerHTML = "";
+}
 
 
 /* 
@@ -43,6 +51,7 @@ function submitPOST(data,uri,response)
         {
             var response = xmlhttp.responseText;
             document.getElementById("errors").innerHTML = response;
+            setLoading(false);
         }
     }
     xmlhttp.open("POST",uri,true);

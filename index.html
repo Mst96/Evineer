@@ -7,6 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Evineer</title>
 
+    <link rel="stylesheet" href="css/common.css">
     <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
@@ -105,7 +106,7 @@
               <option value="Business">I am a business</option>
               </select>
 
-              <button type="button" onClick="submitRegistration()" class="btn btn-default marginBottom" value="Submit">Submit!</button>
+              <button type="button" id="submitButton" onClick="setLoading(true);submitRegistration()" class="btn btn-default marginBottom" value="Submit">Submit!</button>
             </div>
 
             <div id="errors">
