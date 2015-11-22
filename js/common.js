@@ -19,6 +19,18 @@ function getAjax()
     return xmlhttp;
 }
 
+window.addEventListener("keydown", checkKeyPressed, false);
+ 
+ var previous;
+function checkKeyPressed(e) {
+
+    if(e.keyCode == 13){
+        submitRegistration();
+    }
+}
+
+
+
 /* 
  * function that carries out ajax post
  */
