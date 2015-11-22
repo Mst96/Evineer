@@ -1,7 +1,7 @@
-/*
- * Functions to get ajax object and stuff
- */
-
+$(function(){
+	$('#join').on('click', function(){
+		var email = $('input[name=email]').val(),
+			type = $('select[name=type]').val();
 /* 
  * Gets a supported ajax request object thing
 */
@@ -57,24 +57,20 @@ function submitPOST(data,uri,response)
     xmlhttp.onreadystatechange = function() 
     {
         if(xmlhttp.readyState==4 && xmlhttp.status == 200)
-        {
-            var response = xmlhttp.responseText;
-            setLoading(false);
-            document.getElementById("errors").innerHTML = response;
-        }
-    }
-    xmlhttp.open("POST",uri,true);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send(data);
-}
 
-/* 
- * posts registration form to server via ajax
- */
-function submitRegistration()
-{
-    var email = document.getElementById("email").value;
-    var role = document.getElementById("role").value;
-    document.getElementById("errors").innerHTML = "";
-    submitPOST("email=" + email + "&role=" + role,"php/register.php","errors");
-}
+        if(email != "" && type != "")
+
+        {
+            $('#thank-you').show();
+            $('#sign-up').hide();
+
+            $.post('php/register', {
+                email : email
+            ,   role : type
+            }, function() {
+                console.log();
+            });
+        }
+    });
+});
+
